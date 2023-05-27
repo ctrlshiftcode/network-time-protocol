@@ -21,9 +21,9 @@ public class TimeService {
     @Value("${ntp.server.timeout}")
     private int serverTimeout;
 
-    public String getNTPTime(){
+    public Time getNTPTime(){
 
-        String valueReturn = "";
+        Time time = new Time();
 
         try {
             NTPUDPClient client = new NTPUDPClient();
@@ -41,14 +41,14 @@ public class TimeService {
 
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss.SSS'Z'").withZone(ZoneOffset.UTC);
 
-            valueReturn = formatter.format(Instant.ofEpochMilli(unixTimeInMillis));
-            log.info("Return UTC Time {}", valueReturn);
+            time.setUtcTime(formatter.format(Instant.ofEpochMilli(unixTimeInMillis)));
+            log.info("Return UTC Time {}", time.getUtcTime());
 
         } catch (Exception e) {
             log.error(e.getMessage());
         }
 
-        return valueReturn;
+        return time;
     }
 
 }

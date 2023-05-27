@@ -5,6 +5,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Optional;
+
 @RestController
 public class TimeController {
 
@@ -12,8 +14,7 @@ public class TimeController {
     private TimeService timeService;
 
     @GetMapping("/ntp/utcTime")
-    public ResponseEntity<String> getUTCTimeObject(){
-        return ResponseEntity.ok(timeService.getNTPTime()) ;
+    public Optional<Time> getUTCTimeObject(){
+        return Optional.ofNullable(timeService.getNTPTime());
     }
-
 }

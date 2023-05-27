@@ -9,7 +9,7 @@ public class TimeRepositoryImpl implements TimeRepository {
     @Autowired
     private TimeService timeService;
 
-    public String getUTCTime() {
+    public Time getUTCTime() {
         return timeService.getNTPTime();
     }
 
