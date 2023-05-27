@@ -23,8 +23,9 @@ HTTP/1.1 200
 Content-Type: application/json
 Content-Length: 13
 Date: Sun, 14 May 2023 01:27:11 GMT
-
-01:27:11.309Z
+{
+  "utcTime": "16:17:06.372Z"
+}
 ```
 
 > References: <br>
