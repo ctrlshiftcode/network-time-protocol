@@ -15,14 +15,15 @@ The REST API to the example app is described below.
 ```
 http://localhost:8080/swagger-ui/index.html
 ```
+![img.png](assets/img2.png)
+
+
 
 ### Request
-
 ```
 curl -i -H 'Accept: application/json' http://localhost:8080/ntp/utcTime
 ```
 ### Response
-
 ```
 HTTP/1.1 200
 Content-Type: application/json
@@ -33,6 +34,7 @@ Date: Sun, 14 May 2023 01:27:11 GMT
 }
 ```
 ![img.png](assets/img.png)
+
 
 > References: <br>
 > 1. [Wikipedia](https://pt.wikipedia.org/wiki/Network_Time_Protocol) - _Network Time Security_
