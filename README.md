@@ -11,6 +11,11 @@ and with millisecond precision.
 ## API Endpoint
 The REST API to the example app is described below. 
 
+## Swagger UI
+```
+http://localhost:8080/swagger-ui/index.html
+```
+
 ### Request
 
 ```
@@ -27,6 +32,7 @@ Date: Sun, 14 May 2023 01:27:11 GMT
   "utcTime": "16:17:06.372Z"
 }
 ```
+![img.png](assets/img.png)
 
 > References: <br>
 > 1. [Wikipedia](https://pt.wikipedia.org/wiki/Network_Time_Protocol) - _Network Time Security_
